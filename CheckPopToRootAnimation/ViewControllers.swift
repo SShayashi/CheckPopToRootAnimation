@@ -25,7 +25,7 @@ class SampleViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true) // ② Set NavigationBar hidden.
     }
     
     private func setupConstraints(){
@@ -68,7 +68,7 @@ class FirstViewController: UIViewController{
     
     @objc func showModalTapped(){
         let modalViewController = ModalViewController { [weak self] in
-            self?.navigationController?.popToRootViewController(animated: true)
+            self?.navigationController?.popToRootViewController(animated: true) // ③ Call popToRootViewController before dismiss modal.
         }
         let navigationController = UINavigationController(rootViewController: modalViewController)
         navigationController.configureNavigationBar()
@@ -76,6 +76,7 @@ class FirstViewController: UIViewController{
         present(navigationController, animated: true)
     }
 }
+
 
 class ModalViewController: UIViewController {
     

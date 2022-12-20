@@ -11,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let sampleViewController = SampleViewController()
         let navigationController = UINavigationController(rootViewController: sampleViewController)
         navigationController.configureNavigationBar()
-        navigationController.navigationBar.isTranslucent = false // When to add this line, pop transition works incorrectly.
+        navigationController.navigationBar.isTranslucent = false // ① Set isTranslucent false.
         window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
