@@ -51,7 +51,6 @@ class FirstViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "First Native Screen"
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.view.backgroundColor = .white
         self.view.addSubview(showModalButton)
         setupConstraints()
@@ -59,6 +58,12 @@ class FirstViewController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     private func setupConstraints(){
