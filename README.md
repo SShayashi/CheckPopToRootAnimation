@@ -1,6 +1,6 @@
 # Overview
 
-In a specific situation, dismiss modal animation works strangely. This project reproduces the issue.
+This project is reproduction code for the issue that popToRoot method works strangely.
 
 Sample Screenshot：
 
